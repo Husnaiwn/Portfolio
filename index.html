@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HUSNAIN | Graphic Designer, Video Editor & CS Student</title>
+<meta name="description" content="HUSNAIN is a graphic designer and video editor from Lahore, Pakistan, studying BS Computer Science at UCP.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#home"><img src="images/profile.jpg" alt="" width="34" height="34">HUSNAIN</a>
+  <button class="menu" aria-expanded="false">Menu</button>
+  <nav class="nav">
+    <a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#journey">Journey</a><a class="cta" href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <img class="avatar" src="images/profile.jpg" alt="HUSNAIN" width="112" height="112">
+    <p class="status"><i></i>Open to freelance work</p>
+    <h1>HUSNAIN</h1>
+    <p class="role">Graphic designer, video editor and Computer Science student</p>
+    <p class="lead">You don't have to be great to start, but you have to start to be great.</p>
+    <div class="actions"><a class="btn solid" href="#work">View my work</a><a class="btn" href="#contact">Contact me</a></div>
+  </section>
+</main>
+
+<div class="overlay" aria-live="polite">
+  <div class="closebar"><button class="close" aria-label="Close">Close &times;</button></div>
+
+  <section class="sheet page about" id="about">
+    <img class="portrait" src="images/profile.jpg" alt="HUSNAIN" width="400" height="400">
+    <div>
+      <h2 class="title">About</h2>
+      <!-- Edit this text to write your own About section -->
+      <p>I'm a graphic designer and video editor from Lahore, Pakistan. Since 2022 I've worked with direct clients on social media posts, banners and YouTube thumbnails, and I run a gaming YouTube channel.</p>
+      <p>I'm now studying Computer Science at UCP, so I can turn design ideas into real products on the web.</p>
+      <h3 class="sub">Skills</h3>
+      <ul class="tags"><li>Photoshop</li><li>Illustrator</li><li>Premiere Pro</li><li>Video editing</li><li>Fast typing</li><li>Written communication</li><li>English</li><li>Urdu</li></ul>
+    </div>
+  </section>
+
+  <section class="sheet page" id="work">
+    <h2 class="title">Work</h2>
+    <p class="intro">The kinds of projects I take on. Full samples are being added.</p>
+    <!-- To add a project: replace a thumb div with <img src="images/your-image.jpg" alt="..."> -->
+    <div class="grid">
+      <article class="card"><div class="thumb">Thumbnails</div><h3>Thumbnails</h3><p>High-contrast YouTube thumbnails designed to earn the click.</p><small>Samples coming soon</small></article>
+      <article class="card"><div class="thumb">Social media posts</div><h3>Social media posts</h3><p>Consistent post designs for brands and creators.</p><small>Samples coming soon</small></article>
+      <article class="card"><div class="thumb">Banners</div><h3>Banners</h3><p>Channel, profile and promotional banners.</p><small>Samples coming soon</small></article>
+      <article class="card"><div class="thumb">Video editing</div><h3>Video editing</h3><p>YouTube edits with clean pacing and color.</p><small>Samples coming soon</small></article>
+    </div>
+  </section>
+
+  <section class="sheet page" id="experience">
+    <h2 class="title">Experience</h2>
+    <div class="rows">
+      <div class="row"><time>2022 – 2025</time><div><h3>Freelance Graphic Designer</h3><p>Designed social media posts, banners and thumbnails for direct clients.</p></div></div>
+      <div class="row"><time>2019 – 2022<br>2026 – Present</time><div><h3>YouTube Content Creator</h3><p>Gaming channel, started in 2019 and relaunched in 2026.</p></div></div>
+    </div>
+  </section>
+
+  <section class="sheet page" id="journey">
+    <h2 class="title">Journey</h2>
+    <ol class="timeline">
+      <li><time>2024 – 2026</time><h3>Intermediate (ICS)</h3><p>KIPS College</p></li>
+      <li><time>2026 – 2030 (expected)</time><h3>BS Computer Science</h3><p>University of Central Punjab (UCP), Lahore</p></li>
+    </ol>
+  </section>
+
+  <section class="sheet page" id="contact">
+    <h2 class="title">Contact</h2>
+    <p class="intro">Tell me about your project. I'll reply by email.</p>
+    <div class="contact-grid">
+      <div class="panel info">
+        <h3>Email</h3><a class="mail" href="mailto:husnainrubina14@gmail.com">husnainrubina14@gmail.com</a>
+        <button class="btn" id="copy" data-email="husnainrubina14@gmail.com">Copy email</button>
+        <h3>Location</h3><p>Lahore, Pakistan</p>
+        <h3>Available for</h3><p>Graphic design, thumbnails, social media posts, banners and video editing.</p>
+      </div>
+      <form class="panel" id="form">
+        <label>Your name<input name="name" required autocomplete="name"></label>
+        <label>Your email<input name="email" type="email" required autocomplete="email"></label>
+        <label>Message<textarea name="msg" rows="6" required></textarea></label>
+        <button class="btn solid" type="submit">Send message</button>
+        <p class="note">This opens your email app with the message ready to send.</p>
+      </form>
+    </div>
+  </section>
+</div>
+
+<footer class="foot"><span>&copy; <span id="year"></span> HUSNAIN</span><a href="mailto:husnainrubina14@gmail.com">husnainrubina14@gmail.com</a></footer>
+<script src="script.js"></script>
+</body>
+</html>
