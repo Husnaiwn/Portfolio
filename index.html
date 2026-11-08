@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Husnain Saqib | Graphic Designer & Video Editor</title>
+<meta name="description" content="Husnain Saqib is a graphic designer and video editor in Lahore, Pakistan. Social posts, banners, thumbnails and YouTube editing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="#home">Husnain Saqib</a>
+  <button class="menu" aria-label="Menu" aria-expanded="false">Menu</button>
+  <nav class="nav">
+    <a href="#services">Services</a>
+    <a href="#journey">Journey</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="home">
+  <section class="hero wrap">
+    <div class="hero-text">
+      <p class="badge"><i></i>Available for new projects</p>
+      <h1><span class="line">Designs that get clicked.</span> <span class="line">Edits that keep people watching.</span></h1>
+      <p class="lead">I'm Husnain, a graphic designer and video editor in Lahore, Pakistan. I make social posts, banners, thumbnails and YouTube videos for creators and brands.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Start a project</a>
+        <a class="btn" href="#services">See what I do</a>
+      </div>
+      <ul class="pills" aria-label="Tools">
+        <li>Photoshop</li><li>Illustrator</li><li>Premiere Pro</li>
+      </ul>
+    </div>
+    <!-- To use your photo: save it as images/profile.jpg -->
+    <div class="avatar"><span>HS</span><img src="images/profile.jpg" alt="Husnain Saqib" onerror="this.remove()"></div>
+  </section>
+
+  <section class="wrap process">
+    <h2>How we'll work together</h2>
+    <ol>
+      <li><b>1. Brief</b><p>You tell me the goal, the audience and what you already have.</p></li>
+      <li><b>2. Draft</b><p>I send a first design or edit so you can react to something real.</p></li>
+      <li><b>3. Polish</b><p>We refine it together, then I deliver the final files.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap" id="services">
+    <h2>Services</h2>
+    <div class="services">
+      <article class="svc big">
+        <h3>Graphic design</h3>
+        <p>Scroll-stopping visuals that look consistent across every platform.</p>
+        <ul><li>Social media posts</li><li>Banners</li><li>YouTube thumbnails</li></ul>
+      </article>
+      <article class="svc">
+        <h3>Video editing</h3>
+        <p>Clean cuts that hold attention from the first second.</p>
+        <ul><li>YouTube content</li><li>Pacing and storytelling</li><li>Color correction</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap" id="journey">
+    <h2>My journey</h2>
+    <ol class="timeline">
+      <li><time>2019</time><div><h3>Started a gaming YouTube channel</h3><p>I learned video editing by making my own videos, and it grew into a skill I love.</p></div></li>
+      <li><time>2022</time><div><h3>Became a freelance graphic designer</h3><p>Worked directly with clients on social posts, banners and thumbnails until 2025.</p></div></li>
+      <li><time>2026</time><div><h3>Back on YouTube, and back to studying</h3><p>I returned to creating content and started a BS in Computer Science at UCP to add technical depth to my creative work.</p></div></li>
+    </ol>
+    <h3 class="sub">Skills</h3>
+    <ul class="pills big-pills">
+      <li>Photoshop</li><li>Illustrator</li><li>Premiere Pro</li><li>Video editing</li><li>Fast typing</li><li>Clear written communication</li><li>English (fluent)</li><li>Urdu (native)</li>
+    </ul>
+  </section>
+
+  <section class="wrap" id="work">
+    <h2>Portfolio</h2>
+    <div class="work">
+      <!-- Copy one block per project. Replace the div with <img src="images/your-project.jpg" alt="..."> -->
+      <article class="tile"><div class="ph">Thumbnail</div><h3>Your first project goes here</h3><p>Add an image, the client's goal and what you delivered.</p></article>
+      <article class="tile"><div class="ph">Banner</div><h3>Your second project goes here</h3><p>Even a personal project shows how you think.</p></article>
+      <article class="tile"><div class="ph">Video</div><h3>Your third project goes here</h3><p>Link a YouTube video or add a thumbnail.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap contact" id="contact">
+    <h2>Let's work together</h2>
+    <p class="lead">Tell me what you're making and when you need it. I reply to every message.</p>
+    <dl>
+      <div><dt>Email</dt><dd><a href="mailto:husnainrubina14@gmail.com">husnainrubina14@gmail.com</a></dd></div>
+      <div><dt>Phone</dt><dd><a href="tel:+920000000000">+92 000 0000000</a></dd></div>
+      <div><dt>Location</dt><dd>Lahore, Pakistan</dd></div>
+    </dl>
+    <button class="btn primary" id="copy" data-email="husnainrubina14@gmail.com">Copy email</button>
+  </section>
+</main>
+
+<footer class="wrap foot">&copy; <span id="year"></span> Husnain Saqib</footer>
+<script src="script.js"></script>
+</body>
+</html>
