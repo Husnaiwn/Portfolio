@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>HUSNAIN | Graphic Designer, Video Editor & CS Student</title>
 <meta name="description" content="HUSNAIN is a graphic designer and video editor from Lahore, Pakistan, studying BS Computer Science at UCP.">
 <meta name="theme-color" content="#07080c">
@@ -28,10 +28,10 @@
       <img src="images/profile.jpg" alt="" width="30" height="30">HUSNAIN
     </a>
     <div class="links" id="links">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
       <a href="#journey">Journey</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
       <a href="#contact" class="cta">Contact</a>
     </div>
     <button class="menu" aria-label="Open menu" aria-expanded="false" aria-controls="links">
@@ -55,32 +55,67 @@
         <a class="btn glass-btn" href="#contact">Contact me</a>
       </div>
     </div>
-    <a class="scroll glass" href="#about" aria-label="Scroll down">↓</a>
+    <a class="scroll glass" href="#journey" aria-label="Scroll down">↓</a>
   </section>
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="container about-grid">
-      <img class="portrait reveal" src="images/profile.jpg" alt="Portrait of HUSNAIN" width="400" height="400">
-      <div class="about-text reveal">
-        <p class="eyebrow">Get to know me</p>
-        <h2>About</h2>
-        <p>I'm a Computer Science student from Lahore, Pakistan, currently studying at UCP. I'm focused on learning software development, web technologies, and modern tools to build useful digital products.</p>
-        <p>I'm constantly learning and experimenting with new technologies through personal projects, coursework, and hands-on practice. My goal is to turn what I learn into real-world projects and grow into a skilled software developer.</p>
-        <h3 class="skills-title">Skills</h3>
-        <ul class="tags">
-          <li>Photoshop</li>
-          <li>Illustrator</li>
-          <li>Premiere Pro</li>
-          <li>C++</li>
-          <li>JavaScript</li>
-          <li>HTML &amp; CSS</li>
-          <li>Git &amp; GitHub</li>
-          <li>AI &amp; Machine Learning</li>
-          <li>Generative AI</li>
-          <li>APIs &amp; Backend</li>
-          <li>Databases &amp; SQL</li>
-        </ul>
+  <!-- JOURNEY: current first, past below -->
+  <section class="section" id="journey">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">Education</p>
+        <h2>Journey</h2>
+      </header>
+      <div class="list">
+        <article class="glass exp reveal">
+          <time>2026 – 2030 (expected)</time>
+          <div>
+            <span class="badge">Now</span>
+            <h3>BS Computer Science</h3>
+            <p>University of Central Punjab (UCP), Lahore</p>
+          </div>
+        </article>
+        <article class="glass exp reveal">
+          <time>2024 – 2026</time>
+          <div>
+            <h3>Intermediate (ICS)</h3>
+            <p>KIPS College</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE: current first, past below -->
+  <section class="section" id="experience">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">Background</p>
+        <h2>Experience</h2>
+      </header>
+      <div class="list">
+        <article class="glass exp reveal">
+          <time>2019 – 2022<br>2026 – Present</time>
+          <div>
+            <span class="badge">Now</span>
+            <h3>YouTube Content Creator</h3>
+            <p>Running a gaming channel. Started in 2019 and relaunched in 2026.</p>
+          </div>
+        </article>
+        <article class="glass exp reveal">
+          <time>2026 – Present</time>
+          <div>
+            <span class="badge">Now</span>
+            <h3>Studying CS &amp; Learning AI</h3>
+            <p>BS Computer Science at UCP, building projects in AI, web development and C++.</p>
+          </div>
+        </article>
+        <article class="glass exp reveal">
+          <time>2022 – 2025</time>
+          <div>
+            <h3>Freelance Graphic Designer</h3>
+            <p>Designed social media posts, banners and thumbnails for direct clients using Photoshop and Illustrator.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -91,7 +126,7 @@
       <header class="section-head reveal">
         <p class="eyebrow">Selected work</p>
         <h2>Work</h2>
-        <p>The kinds of projects I take on. Click any piece to view it larger.</p>
+        <p>The kinds of projects I take on. Tap any piece to view it larger.</p>
       </header>
 
       <div class="work-grid">
@@ -139,7 +174,7 @@
             </a>
             <div class="meta">
               <h3>Video editing</h3>
-              <p>Edited videos and motion pieces built for YouTube and social platforms.</p>
+              <p>Edited videos built for YouTube and social platforms.</p>
             </div>
           </article>
         </div>
@@ -148,51 +183,30 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
-    <div class="container">
-      <header class="section-head reveal">
-        <p class="eyebrow">Background</p>
-        <h2>Experience</h2>
-      </header>
-      <div class="exp-list">
-        <article class="glass exp reveal">
-          <time>2022 – 2025</time>
-          <div>
-            <h3>Freelance Graphic Designer</h3>
-            <p>Designed social media posts, banners and thumbnails for direct clients.</p>
-          </div>
-        </article>
-        <article class="glass exp reveal">
-          <time>2019 – 2022<br>2026 – Present</time>
-          <div>
-            <h3>YouTube Content Creator</h3>
-            <p>Gaming channel, started in 2019 and relaunched in 2026.</p>
-          </div>
-        </article>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <img class="portrait reveal" src="images/profile.jpg" alt="Portrait of HUSNAIN" width="400" height="400">
+      <div class="about-text reveal">
+        <p class="eyebrow">Get to know me</p>
+        <h2>About</h2>
+        <p>I'm a Computer Science student from Lahore, Pakistan, currently studying at UCP. I'm focused on learning software development, web technologies, and modern tools to build useful digital products.</p>
+        <p>I'm constantly learning and experimenting with new technologies through personal projects, coursework, and hands-on practice. My goal is to turn what I learn into real-world projects and grow into a skilled software developer.</p>
+        <h3 class="skills-title">Skills</h3>
+        <ul class="tags">
+          <li>Photoshop</li>
+          <li>Illustrator</li>
+          <li>Premiere Pro</li>
+          <li>C++</li>
+          <li>JavaScript</li>
+          <li>HTML &amp; CSS</li>
+          <li>Git &amp; GitHub</li>
+          <li>AI &amp; Machine Learning</li>
+          <li>Generative AI</li>
+          <li>APIs &amp; Backend</li>
+          <li>Databases &amp; SQL</li>
+        </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- JOURNEY -->
-  <section class="section" id="journey">
-    <div class="container">
-      <header class="section-head reveal">
-        <p class="eyebrow">Education</p>
-        <h2>Journey</h2>
-      </header>
-      <ol class="timeline">
-        <li class="glass step reveal">
-          <time>2024 – 2026</time>
-          <h3>Intermediate (ICS)</h3>
-          <p>KIPS College</p>
-        </li>
-        <li class="glass step reveal">
-          <time>2026 – 2030 (expected)</time>
-          <h3>BS Computer Science</h3>
-          <p>University of Central Punjab (UCP), Lahore</p>
-        </li>
-      </ol>
     </div>
   </section>
 

@@ -19,6 +19,9 @@
   links.addEventListener('click', e => {
     if (e.target.tagName === 'A') setMenu(false);
   });
+  addEventListener('resize', () => {
+    if (innerWidth > 860) setMenu(false);
+  });
 
   // ---------- Nav: glass intensifies on scroll ----------
   const nav = document.querySelector('.nav');
@@ -56,7 +59,7 @@
     io.observe(el);
   });
 
-  // ---------- Cursor spotlight on work cards ----------
+  // ---------- Cursor / touch spotlight on work cards ----------
   document.querySelectorAll('.work-card').forEach(card => {
     card.addEventListener('pointermove', e => {
       const r = card.getBoundingClientRect();
@@ -76,11 +79,13 @@
     lbCap.textContent = caption;
     lb.classList.add('open');
     lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
   }
 
   function closeLightbox() {
     lb.classList.remove('open');
     lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
   }
 
   document.querySelectorAll('[data-lightbox]').forEach(a => {
