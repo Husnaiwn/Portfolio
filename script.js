@@ -2,8 +2,8 @@
   const root = document.documentElement;
   root.classList.add('js');
 
-  // Footer year
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // ---------- Mobile menu ----------
   const menu = document.querySelector('.menu');
@@ -17,13 +17,13 @@
 
   menu.addEventListener('click', () => setMenu(!links.classList.contains('open')));
   links.addEventListener('click', e => {
-    if (e.target.tagName === 'A') setMenu(false);
+    if (e.target.closest('a')) setMenu(false);
   });
   addEventListener('resize', () => {
     if (innerWidth > 860) setMenu(false);
   });
 
-  // ---------- Nav: glass intensifies on scroll ----------
+  // ---------- Nav glass intensifies on scroll ----------
   const nav = document.querySelector('.nav');
   addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive: true });
 
@@ -59,12 +59,17 @@
     io.observe(el);
   });
 
-  // ---------- Cursor / touch spotlight on work cards ----------
-  document.querySelectorAll('.work-card').forEach(card => {
+  // ---------- Cursor / touch light on cards ----------
+  document.querySelectorAll('.work-card, .exp').forEach(card => {
+    let raf = 0;
     card.addEventListener('pointermove', e => {
-      const r = card.getBoundingClientRect();
-      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+        raf = 0;
+      });
     });
   });
 
@@ -72,26 +77,32 @@
   const lb = document.getElementById('lightbox');
   const lbImg = lb.querySelector('img');
   const lbCap = lb.querySelector('.lb-cap');
+  const lbClose = lb.querySelector('.lb-close');
+  let opener = null;
 
-  function openLightbox(src, caption) {
+  function openLightbox(src, caption, from) {
+    opener = from;
     lbImg.src = src;
     lbImg.alt = caption;
     lbCap.textContent = caption;
     lb.classList.add('open');
     lb.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    lbClose.focus();
   }
 
   function closeLightbox() {
+    if (!lb.classList.contains('open')) return;
     lb.classList.remove('open');
     lb.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (opener) opener.focus();
   }
 
   document.querySelectorAll('[data-lightbox]').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
-      openLightbox(a.href, a.dataset.caption || '');
+      openLightbox(a.href, a.dataset.caption || '', a);
     });
   });
 
@@ -99,7 +110,6 @@
     if (e.target === lb || e.target.closest('.lb-close')) closeLightbox();
   });
 
-  // ---------- Keyboard ----------
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       closeLightbox();
@@ -122,12 +132,14 @@
   });
 
   // ---------- Contact form: opens the visitor's email app ----------
-  document.getElementById('form').addEventListener('submit', e => {
+  const form = document.getElementById('form');
+  form.addEventListener('submit', e => {
     e.preventDefault();
-    const f = new FormData(e.target);
-    const name = f.get('name');
-    const email = f.get('email');
-    const msg = f.get('msg');
+    if (!form.reportValidity()) return;
+    const f = new FormData(form);
+    const name = String(f.get('name') || '').slice(0, 80);
+    const email = String(f.get('email') || '').slice(0, 120);
+    const msg = String(f.get('msg') || '').slice(0, 1500);
 
     const subject = `Project enquiry from ${name}`;
     const body = `${msg}\n\nFrom: ${name} (${email})`;
